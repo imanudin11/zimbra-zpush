@@ -1,4 +1,7 @@
 {
+    "require": {
+        "php": ">=8.2.35,<8.3.0|>=8.3.36,<8.4.0|>=8.4.27,<8.5.0|>=8.5.12"
+    },
     "autoload": {
         "classmap": ["autodiscover/", "backend/", "include/", "lib/"],
         "files": ["version.php", "lib/core/zpushdefs.php", "lib/utils/compat.php"]
