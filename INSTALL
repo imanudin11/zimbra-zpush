@@ -7,8 +7,18 @@ https://wiki.z-hub.io/display/ZP/Installation+from+source
 Requirements
 ------------
 
-Z-Push 2.3 runs only on PHP 5.4 or later
+Z-Push 2.3 runs only on PHP 5.4 or later.
 A PEAR dependency as in previous versions does not exist in Z-Push 2.
+
+SECURITY: PHP 8.2.35, 8.3.36, 8.4.27, and 8.5.12 fix CVE-2026-109618 and
+CVE-2026-109619, two critical (CVSS 9.2) unauthenticated remote code
+execution vulnerabilities in the PHP engine itself (out-of-memory
+corruption and a use-after-free from stale global state across requests).
+Z-Push runs as a PHP web worker handling untrusted ActiveSync requests
+directly from the internet, so running it on an unpatched PHP build
+exposes it to these regardless of anything in this codebase. Use a PHP
+version at or above the fixed release for your branch (8.2.35+, 8.3.36+,
+8.4.27+, or 8.5.12+), not just "5.4 or later" as stated above.
 
 The PHP version requirement is met in these distributions and versions (or later).
 
